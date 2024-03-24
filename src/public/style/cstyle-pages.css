@@ -1,0 +1,508 @@
+@import url(//db.onlinewebfonts.com/c/05663321f7477456a65e0c363c777377?family=Avenir);
+:root {
+    --cr-bg-100:#E6EBE7;
+    --cr-bg-200:#D0D2CD;
+    --cr-bg-400:#B1BEBA;
+    --cr-bg-600:#9F9E8F;
+    --cr-bg-800:#605A5A;
+    --cr-bg-900:#342C2D;
+    --cr-bg-offwhite:#FAF9F6; 
+/* 2COLOR COMPLEMETRY */
+    --cr-2r-blue:#1ECBE1;
+    --cr-2r-redish:#E1341E;
+/* 2 COLOR BLUE MONO*/
+    --cr-2mono-200:#1ECBE1;
+    --cr-2mono-100:#4BD5E7;
+    --cr-2mono-000:#E6EFF6;
+    /* 3 color ANALOGOUS */
+    --cr--3alg-green:#1EE196;
+    --cr--3alg-blue:#1E6AE1;
+    --cr--3alg-lblue:#1ECBE1;
+    /* 3 color TRIADIC */
+    --cr-3tri-blue:#1ECBE1;
+    --cr-3tri-pink:#E11ECB;
+    --cr-3tri-yellow:#CBE11E;
+    /* 4 COLORS TETRADIC */
+    --cr-4tet-blue:#1ECBE1;
+    --cr-4tet-purple:#961EE1;
+    --cr-4tet-rose:#E1341E;
+    --cr-4tet-green:#6AE11E;
+/* fonts */
+    --ff-bai: 'Bai Jamjuree', sans-serif;
+    --ff-cursive: 'Courgette', cursive;
+    --ff-ibm-mono: 'IBM Plex Mono', monospace;
+    --ff-montserrat: 'Montserrat Alternates', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif;
+    --ff-oxa: 'Oxanium', cursive;
+    --ff-pt: 'PT Sans', sans-serif;
+    --ff-ubuntu: 'Ubuntu', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-aviner: 'Avenir', sans-serif;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+:root, body, div,
+h1, h2, h3, h4, h5, h6,
+p {
+margin: 0;
+}
+body{
+    background-color: var(--cr-bg-offwhite);
+    font-family: var(--ff-open-sans);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+/* h1, h2, h3, h4, h5, h6{
+    font-family: var(--ff-montserrat);
+    font-weight: 900;
+    line-height: 1;
+}
+h1, h2, h3 {
+    margin-bottom: 1em;
+} */
+/* h4, h5, h6 {
+    margin-bottom: 0.3em;
+} */
+/* ---------------------------------------------------------------------------- */
+.products-page {
+    max-width: 90%;
+    margin: 5rem 0; 
+    margin-inline: auto;
+}
+.products-page .head {
+    background: linear-gradient(0deg, rgb(243, 240, 240) 27%, rgb(104, 124, 226) 99%);
+    padding: 2rem; 
+    position: relative;
+}
+.products-page .head h6 {
+    color: var(--cr-2r-redish);
+}
+.products-page h2 {
+    display: block;
+    margin-bottom: .5rem;
+    /* padding: 1rem; */
+}
+.head p {
+    margin-top:3rem;
+    color:var(--cr-bg-600);
+}
+.products-page .tip {
+    margin-top: 3rem;
+    background: linear-gradient(0deg, rgba(30,225,150,1) 0%, rgba(255,255,255,1) 71%);
+    padding: 1em;
+    position: absolute;
+    bottom: -50px;
+    right: 0; 
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-top: 3rem;
+    font-family: var(--ff-montserrat);
+}
+@media (max-width: 50rem) {
+    .products-page .tip{
+        position:relative;
+        border-radius: 10px;
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+.products-page section {
+    margin: 5rem auto
+}
+
+.split-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+}
+.split-product img {
+    border-radius: 10px;
+}
+.products-page h5{
+    margin: 1rem 0;
+    color: var(--cr--3alg-blue);
+    font-family: var(--ff-open-sans);
+}
+.products-page p {
+    font-size: 1rem;
+    color: var(--cr-bg-800);
+}
+@media (min-width: 45rem){
+    .split-product{
+        flex-direction: row;
+        gap: 4rem;
+        justify-content: flex-start;
+    }
+     /* .split-product > * {
+        flex-basis: 100%;
+    } */
+    .split-product img {
+        height: 250px;
+        min-width: 400px;
+        object-fit: cover;
+    }
+    .split-product .text-center {
+        text-align: left;
+    }
+    .split-product .image {
+        flex-basis: 40%;
+    }
+    .split-product .info {
+        flex-basis: 40%;
+    }
+    .head p {
+    max-width: 60%;
+    }
+}
+/* ----------------------------------Diagnostic Imaging -----------------------------------*/
+.products-page-detail-top {
+    max-width: 100%;
+    margin: 0 auto 5rem auto; 
+    position: relative;
+    background: url("../images/products/diagnostic-img.jpg");
+    min-height: 60vh;
+    color:var(--cr-bg-offwhite);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    background-size: 100%;
+    /* font-family: nike combat stancil sans-serif; */
+    
+}
+.products-page-detail-top h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1;
+    
+}
+.products-page-detail-top h6 {
+    text-transform: capitalize;
+    z-index: 1;
+}
+.products-page-detail-top .head {
+    background: #1E6AE1;
+    background: linear-gradient(var(--cr--3alg-blue), var(--cr-2r-redish));
+    width: 100%;
+    height: 100%;   
+    opacity: .4;
+    position: absolute;
+}
+.products-page-detail{
+    max-width: 80%; 
+    margin: 0 auto;
+}
+.products-page-detail h1 {
+    font-family:var(--ff-aviner);
+    margin-bottom: 1rem;    
+}
+.products-page-detail h2 {
+    margin-top: 3rem;
+}
+.products-page-detail section {
+    margin-top: 7rem;
+}
+/* catagories styling -------------------------*/
+.products-page-detail-cat{
+    max-width: 80%;
+    margin:0 auto;
+
+}
+.cat {
+    display: flex;
+    gap:2rem;
+    flex-wrap: wrap;
+    justify-content:first baseline;
+    align-items: center;
+}
+
+.cat-items {
+    width: 20%;
+    /* height: 200px; */
+    flex-grow: 1;
+    max-width: 32%;
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+@media (max-width:850px){
+    .cat-items {
+        flex-basis: 44%;
+        max-width:44%;
+    }
+}
+@media (max-width:40rem){
+    .cat-items {
+        flex-basis: 100%;
+        max-width:100%;
+        gap:1rem;
+    }
+}
+.cat-items img {    
+object-fit: fill;    
+}
+.cat-item-detail {
+    background: var(--cr-bg-200);
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.cat-items a:link{
+    text-decoration: none;
+}
+.cat-items a:hover {
+    text-decoration:none;
+    font-weight: 700;
+}
+.cat-items:hover img, .cat-items:hover p {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cat-item-detail p {
+    color: var(--cr-bg-900);
+    font-family: var(--ff-aviner);
+    padding-left: 5px;
+    font-size: 1.1rem;
+
+}
+.cat-items img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* gallary styling -------------------*/
+.gallary {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    
+}
+.gallary-item {
+    /* flex-basis: 49%; */
+    position: relative;
+    width: 20rem;
+}
+.gallary-item img {
+    border-radius: 5px;
+}
+.gallary-item-tip {
+    position: absolute;
+    /* z-index: 0; */
+    bottom: 0;
+    width: 100%;
+    background: var(--cr-bg-400);
+    opacity: .4;
+    text-align: center;
+}
+
+
+.ppp {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1;
+}
+
+/* Details page styles */
+.details-page {
+    max-width: 84%;
+    margin: 0 auto;
+}
+.medical-equip {
+    background: url("../images/products/medical-equip/medi.jpg");
+}
+.sw-app {
+    background: url("../images/products/sw-app/sw-app.jpg");
+}
+.lab {
+    background: url("../images/products/lab/lab2.jpg");
+}
+.protection {
+    background: url("../images/products/protection/gear3.jpg");
+}
+.vaccine {
+    background: url("../images/products/vaccine/vaccine.jpg");
+}
+/* services details pagr styling ------------------------------------------------------------------------- */
+
+.product-details {
+    background: var(--cr-bg-400);
+}
+.services-support {
+    background: url("../images/services/services.jpg");
+    color:var(--cr-bg-900);
+}
+.services-details {
+    max-width:80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    margin-top: initial;
+}
+.abc{
+    background-color: #fff;
+    margin-top: 0px;    
+    padding-top: 3rem;
+}
+.services-para {
+    position: relative;
+    background: url("../images/services/contact-us-services.jpg")no-repeat;
+    background-position: bottom;
+}
+
+.services-details h2 {
+    line-height: 2rem;
+}
+.services-details p {
+    line-height: 2rem;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    font-family:var(--ff-aviner);
+}
+.services-details a:link {
+    text-decoration: none;
+    color: var(--cr-bg-800);
+    font-weight: 700;
+}
+.services-details a:hover {
+    text-decoration: underline;
+    color: var(--cr--3alg-blue);
+}
+/* planning */
+.services-planning {
+    background: url("../images/services/planning2.jpg");
+    background-position: center;
+}
+.services-training {
+    background: url("../images/services/training1.jpg");
+    background-position: center;
+}
+.training-background {
+    position: relative;
+    background: url("../images/services/training-background.jpg")no-repeat;
+    background-position: bottom;
+}
+.about {
+    background: url("../images/about/empty.jpg");
+}
+.about h2 {
+    font-weight: 600;
+}
+.our-company, .our-history {
+    max-width: 75%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+}
+.our-company h3 {
+    line-height: 2rem;
+    margin-bottom: 3rem;
+}
+.history {
+    background: var(--cr-bg-200);
+}
+.our-history h3 {
+    padding: 3rem 0;
+}
+.our-history p{
+    padding:.5rem 0;
+}
+/* contacts styling ----------------------*/
+.contacts-page {
+    background: #fff;
+    padding: 2rem 0;
+}
+.contacts {
+    background: var(--cr-bg-offwhite);
+}
+.contacts-page section {
+    max-width: 80%;
+    margin: 3rem auto;
+}
+.section-contacts {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content:left;
+    align-items: left;
+
+}
+.email {
+    background: #445C7B;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.email h4 {
+    font-weight: 700;
+    /* font-size: 1.2rem; */
+    margin-bottom: 1rem;
+    color:var(--cr-bg-offwhite);
+}
+.email input, .email textarea {
+    margin-bottom: 1rem;
+    padding: 10px 5px;
+}
+.email input[type="submit"] {
+    border-radius: 20px;
+    border:none;
+    padding: 4px 30px;
+    background: #01CAB8;
+    font-size: 1.7rem;
+    font-family: var(--ff-aviner);
+}
+.email input[type="submit"]:hover {
+    background: var(--cr-bg-600);
+    color: var(--cr-bg-offwhite);
+}
+.contacts h3 {
+    margin-bottom: 1rem;
+}
+.contacts-list {
+   margin: initial;
+   margin-bottom: 5rem;
+   /* border: 1px solid red; */
+}
+.contact-item{
+    margin-bottom: 1.5rem;
+}
+.contact-item h6 {
+    color:var(--cr-bg-600);
+}
+.contacts-list h4 {
+    margin-bottom: 2rem;
+}
+@media (min-width: 55rem) {
+    .section-contacts {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+    .email {
+        flex-basis: 60%;
+        /* flex-grow: 1; */
+        position: relative;
+    }
+    .contacts-list {
+        margin-top: 2rem;
+    }
+    .contacts h3, .contacts p {
+        max-width: 50%;
+    }
+    .submit-emial {
+        position: absolute;
+        bottom: -30px;
+        display: inline;
+        margin-inline: 0;
+    }
+}
